@@ -4,6 +4,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Image from '../Image';
 
 const IndexPage = () => {
   
@@ -24,8 +25,8 @@ const IndexPage = () => {
                 
                 <div className='bg-gray-100 rounded-2xl flex mb-2'>
                   {place.photos?.[0] && (
-                    <img className='rounded-2xl object-cover aspect-square' 
-                      src={'http://localhost:4000/uploads/' + place.photos?.[0]} />
+                    <Image className='rounded-2xl object-cover aspect-square' 
+                      src={place.photos?.[0]} />
                   )}
                 </div>
 

@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import axios from 'axios';
+import Image from "./Image";
 
 // eslint-disable-next-line react/prop-types
 export default function PhotosUploader({addedPhotos, onChange}) {
@@ -125,9 +127,8 @@ export default function PhotosUploader({addedPhotos, onChange}) {
         {addedPhotos.length > 0 && addedPhotos.map((link) => (
             // eslint-disable-next-line react/jsx-key
             <div className="h-32 flex relative" key={link}>
-                <img className="rounded-2xl w-full object-cover" 
-                    src={"http://localhost:4000/uploads/" + link}>    
-                </img>
+                <Image className="rounded-2xl w-full object-cover" src={link}/>
+              
                 {/* To Delete a Chosen Photo */}
                 <button onClick={(e)=> removePhoto(e, link)} className="cursor-pointer absolute bottom-2 right-2 text-white bg-gray-500 rounded-xl p-0.5 bg-opacity-70">
                     {/* Trash Icon */}

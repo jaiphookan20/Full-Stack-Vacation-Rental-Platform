@@ -31,10 +31,12 @@ const RegisterPage = () => {
             "password": password
         }); //using post method of Axios to send an HTTP POST request to the specified URL
     
-           alert('Registration sucesful. Now you can log in'); 
+        //    alert('Registration sucesful. Now you can log in');
+           toast.success("Registration Successful. Now you can log in'"); 
         }
        catch(e) {
-            alert('Registration failed. Please try again later');
+            // alert('Registration failed. Please try again later');
+            toast.error("Registration failed. Please try again later"); 
        }
     }
 

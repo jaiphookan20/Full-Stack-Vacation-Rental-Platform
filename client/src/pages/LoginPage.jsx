@@ -4,7 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import { UserContext } from '../UserContext';
-
+import {toast} from 'react-hot-toast';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -24,11 +24,13 @@ const LoginPage = () => {
             //using post method of Axios to send an HTTP POST request to the specified URL
 
             setUser(response.data); //updating the state value of User by using the setUser func from context
-            alert('Login sucesful'); 
+            // alert('Login succesful'); 
+            toast.success("Login Successful");
             setRedirect(true);
         }
         catch(e) {
-            alert('Login failed. Please try again');
+            toast.error("Login failed. Please try again");
+            // alert('Login failed. Please try again');
         }
     }
 

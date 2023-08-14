@@ -12,6 +12,8 @@ import PlacesFormPage from './pages/PlacesFormPage'
 import PlacePage from './pages/PlacePage';
 import BookingPage from './pages/BookingPage';
 import BookingsPage from './pages/BookingsPage'
+import toast, { Toaster } from 'react-hot-toast';
+
 
 axios.defaults.baseURL = 'http://127.0.0.1:4000/'; //sets it as the common base URL for all your requests, simplifying the request URLs throughout your application.
 axios.defaults.withCredentials = true; //By setting withCredentials to true, Axios will include any credentials associated with the current origin (domain, protocol, and port) in the cross-origin requests. This is necessary for making authenticated requests or sending cookies along with the requests.
@@ -22,6 +24,7 @@ function App() {
     
   return (
     <UserContextProvider>
+        <Toaster />
         <Routes>
           {/* Here index is a prop. The index prop is a special prop in react-router-dom that is used to specify the default route, which is rendered when the URL matches the root URL ("/").
           The element prop of the <Route> component is used to specify the component that should be rendered when the URL matches the defined path. 
