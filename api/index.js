@@ -234,7 +234,6 @@ app.post('/api/bookings', async (req, res) => {
 });
 
 
-
 app.get('/api/bookings', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const userData = await getUserDataFromReq(req);
