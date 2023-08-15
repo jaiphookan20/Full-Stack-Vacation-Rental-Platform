@@ -20,9 +20,7 @@ toggled by clicking on the photos and buttons within the component.
 
 Overall, the component provides a user-friendly way to view and navigate through the photos 
 associated with a place.
-
 */
-
 
 import {useState} from "react";
 import Image from "./Image.jsx";

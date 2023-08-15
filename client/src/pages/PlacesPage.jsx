@@ -33,7 +33,7 @@ const PlacesPage = () => {
                 <Link to={'/account/places/' + place._id} className="flex cursor-pointer gap-4 bg-gray-100 bg-opacity-70 mb-3 p-4 rounded-3xl shadow-lg  " key={place._id} >
                     <div className="flex w-32 h-32 bg-gray-200 grow shrink-0">
                         {place.photos.length > 0 && (
-                            <img className="object-cover" src={'http://localhost:4000/uploads/'+ place.photos[0]} alt="" /> 
+                            <Image className="object-cover" src={'http://localhost:4000/uploads/'+ place.photos[0]} alt="" /> 
                         )} 
                         {/* if any photos added ie photos.length > 0, then display image. Also we are just posting the first photo of a place thats been added  */}
                     </div>
