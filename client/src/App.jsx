@@ -15,7 +15,7 @@ import BookingsPage from './pages/BookingsPage'
 import toast, { Toaster } from 'react-hot-toast';
 
 
-axios.defaults.baseURL = 'http://127.0.0.1:4000/'; //sets it as the common base URL for all your requests, simplifying the request URLs throughout your application.
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL; //sets it as the common base URL for all your requests, simplifying the request URLs throughout your application.
 axios.defaults.withCredentials = true; //By setting withCredentials to true, Axios will include any credentials associated with the current origin (domain, protocol, and port) in the cross-origin requests. This is necessary for making authenticated requests or sending cookies along with the requests.
 /* Critical: By including withCredentials: true, when a user logs in or registers using the respective forms, Axios will send the requests with the associated credentials, allowing the API server to authenticate the user properly and set any necessary session cookies.
   This way, withCredentials: true ensures that the authentication and session state are maintained across multiple requests within your web application, providing a seamless login and registration experience. */

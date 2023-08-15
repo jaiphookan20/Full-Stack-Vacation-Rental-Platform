@@ -64,12 +64,17 @@ function getUserDataFromReq(req) {
   });
 }
 
-app.get(API_BASE_URL + '/test', async (req,res) => {
+// app.get(API_BASE_URL + '/test', async (req,res) => {
+//   mongoose.connect(process.env.MONGO_URL);
+//   res.json('test ok');
+// });
+
+app.get('/api/test', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   res.json('test ok');
 });
 
-app.post(API_BASE_URL + '/register', async (req,res) => {
+app.post('/api/register', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {name,email,password} = req.body;
 
@@ -87,7 +92,7 @@ app.post(API_BASE_URL + '/register', async (req,res) => {
 
 });
 
-app.post(API_BASE_URL + '/login', async (req,res) => {
+app.post('/api/login', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {email,password} = req.body;
   const userDoc = await User.findOne({email});
@@ -109,7 +114,7 @@ app.post(API_BASE_URL + '/login', async (req,res) => {
   }
 });
 
-app.get(API_BASE_URL + '/profile', async (req,res) => {
+app.get('/api/profile', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {token} = req.cookies;
   if (token) {
@@ -123,12 +128,12 @@ app.get(API_BASE_URL + '/profile', async (req,res) => {
   }
 });
 
-app.post(API_BASE_URL + '/logout', (req,res) => {
+app.post('/api/logout', (req,res) => {
   res.cookie('token', '').json(true);
 });
 
 
-app.post(API_BASE_URL + '/upload-by-link', async (req,res) => {
+app.post('/api/upload-by-link', async (req,res) => {
   const {link} = req.body;
   const newName = 'photo' + Date.now() + '.jpg';
   await imageDownloader.image({
@@ -140,7 +145,7 @@ app.post(API_BASE_URL + '/upload-by-link', async (req,res) => {
 });
 
 const photosMiddleware = multer({dest:'/tmp'});
-app.post(API_BASE_URL + '/upload', photosMiddleware.array('photos', 100), async (req,res) => {
+app.post('/api/upload', photosMiddleware.array('photos', 100), async (req,res) => {
   const uploadedFiles = [];
 
   for (let i = 0; i < req.files.length; i++) {
@@ -152,7 +157,7 @@ app.post(API_BASE_URL + '/upload', photosMiddleware.array('photos', 100), async 
   res.json(uploadedFiles);
 });
 
-app.post(API_BASE_URL + '/places', async (req,res) => {
+app.post('/api/places', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {token} = req.cookies;
   const {
@@ -170,7 +175,7 @@ app.post(API_BASE_URL + '/places', async (req,res) => {
   });
 });
 
-app.get(API_BASE_URL + '/user-places', async (req,res) => {
+app.get('/api/user-places', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {token} = req.cookies;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
@@ -179,13 +184,13 @@ app.get(API_BASE_URL + '/user-places', async (req,res) => {
   });
 });
 
-app.get(API_BASE_URL + '/places/:id', async (req,res) => {
+app.get('/api/places/:id', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   const {id} = req.params;
   res.json(await Place.findById(id));
 });
 
-app.put(API_BASE_URL + '/places', async (req,res) => {
+app.put('/api/places', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
   mongoose.set('strictQuery', true);
   const {token} = req.cookies;
@@ -207,7 +212,7 @@ app.put(API_BASE_URL + '/places', async (req,res) => {
   });
 });
 
-app.get(API_BASE_URL + '/places', async (req,res) => {
+app.get('/api/places', async (req,res) => {
   console.log('connecting');
   mongoose.connect(process.env.MONGO_URL);
   const places = await Place.find();
@@ -215,7 +220,7 @@ app.get(API_BASE_URL + '/places', async (req,res) => {
   res.json( places );
 });
 
-app.post('/bookings', async (req, res) => {
+app.post('/api/bookings', async (req, res) => {
   mongoose.connect(process.env.MONGO_URL);
   const userData = await getUserDataFromReq(req);
   const {
