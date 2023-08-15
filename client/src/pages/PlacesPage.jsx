@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import AccountNav from "../AccountNav";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Image from "./Image.jsx";
+import Image from "../Image.jsx";
 
 const PlacesPage = () => {
     const [places, setPlaces] = useState([]);
