@@ -3,7 +3,7 @@ import AccountNav from "../AccountNav";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "../Image.jsx";
-import PlaceImg from "../PlaceImg";
+import PlaceImg from "../PlaceImg.jsx";
 
 
 const PlacesPage = () => {

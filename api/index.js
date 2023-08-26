@@ -80,7 +80,8 @@ app.get('/api/test', (req,res) => {
 
 app.post('/api/register', async (req,res) => {
   mongoose.connect(process.env.MONGO_URL);
-  const {name,email,password} = req.body;
+  const {name, email, password} = req.body;
+  console.log(name, email, password);
 
   try {
     const userDoc = await User.create({
@@ -88,8 +89,11 @@ app.post('/api/register', async (req,res) => {
       email,
       password:bcrypt.hashSync(password, bcryptSalt),
     });
+
     res.json(userDoc);
-  } catch (e) {
+  } 
+  
+  catch (e) {
     res.status(422).json(e);
   }
 

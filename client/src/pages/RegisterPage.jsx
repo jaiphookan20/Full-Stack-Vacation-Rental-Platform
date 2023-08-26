@@ -1,12 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import {toast} from 'react-hot-toast';
+import { Link, Navigate } from 'react-router-dom';
+
 
 const RegisterPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [redirect, setRedirect] = useState(false);
 
     /*  Explanation of registerUser(e) & axios.post('/register) function:
         1. The registerUser function then uses Axios to send an HTTP POST request to the 
@@ -33,11 +36,16 @@ const RegisterPage = () => {
     
         //    alert('Registration sucesful. Now you can log in');
            toast.success("Registration Successful. Now you can log in'"); 
+           setRedirect(true);
         }
        catch(e) {
             // alert('Registration failed. Please try again later');
             toast.error("Registration failed. Please try again later"); 
        }
+    }
+
+    if(redirect) { //ie if login successful, redirect to homepage
+        return <Navigate to={'/login'} />
     }
 
     return (
