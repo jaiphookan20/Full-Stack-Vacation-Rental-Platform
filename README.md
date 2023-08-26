@@ -15,10 +15,10 @@ a modern, responsive frontend.
 ## Home Page: Full Listings
 ![Screenshot 2023-08-15 at 10 39 28 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/64c38856-8263-4b04-821d-12728f4e3f9b)
 
-## Individual product listings: 
+## Individual Product Listings: 
 ![Screenshot 2023-08-15 at 10 07 43 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/05af21f9-98e5-4d34-909e-9228051b229a)
 
-## Bottom section of individual product listing page with information regarding the rental Listing and a fully-functional booking widget with datepicker: 
+## Bottom Section of Individual Product Listing Page with Information regarding the Rental Listing and a fully-functional booking widget with datepicker: 
 ![Screenshot 2023-08-15 at 10 08 01 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/571a8320-7b7e-40bb-9d22-b2a6331ec924)
 
 ## Display All Photos: 
