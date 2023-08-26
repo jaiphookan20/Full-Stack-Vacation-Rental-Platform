@@ -3,9 +3,12 @@ Full Stack Vacation Rental Platform built using React, NodeJs, Express, MongoDB 
 
 • Developed a full-stack vacation rental reservation platform which leveraged NodeJs and Express to devise robust
 RESTful APIs for various app features such as user registration/login, property uploads, and bookings
+
 • Utilized MongoDB with the Mongoose ODM library to enhance data management, ensuring efficient retrieval of
 property and user details.
+
 • Incorporated bcrypt and JWT for enhanced user authentication and data security.
+
 • Utilized AWS S3 for efficient image uploading, allowing users to showcase properties and employed TailwindCSS for
 a modern, responsive frontend.
 
