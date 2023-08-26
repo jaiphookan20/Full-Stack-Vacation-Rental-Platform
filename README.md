@@ -21,6 +21,9 @@ a modern, responsive frontend.
 ## Bottom Section of Individual Product Listing Page with Information regarding the Rental Listing and Full-Functional Booking Widget with Datepicker: 
 ![Screenshot 2023-08-15 at 10 08 01 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/571a8320-7b7e-40bb-9d22-b2a6331ec924)
 
+## Display All Photos: 
+![Screenshot 2023-08-26 at 2 07 55 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/8f9d71c8-8834-4442-a44e-16a95ec8d7c8)
+
 ## Bookings Page: View of All Bookings Made by User
 ![Screenshot 2023-08-15 at 10 10 50 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/4b600bcc-8948-48f3-b344-52292af7a89f)
 
