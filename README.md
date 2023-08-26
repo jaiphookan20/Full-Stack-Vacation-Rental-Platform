@@ -15,13 +15,6 @@ a modern, responsive frontend.
 ## Home Page: Full Listings
 ![Screenshot 2023-08-15 at 10 39 28 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/64c38856-8263-4b04-821d-12728f4e3f9b)
 
-## Authentication System: Registration Page 
-![Screenshot 2023-08-26 at 1 40 18 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/81cc16b1-9b93-4438-a619-0d1323592981)
-
-## Authentication System: Login Page (Uses JWT & Bcyrpt)
-![Screenshot 2023-08-26 at 1 39 50 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/96f818ca-cfa9-4cb3-8e48-072cc97b7dcb)
-
-
 ## Individual Product Listing: 
 ![Screenshot 2023-08-15 at 10 07 43 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/05af21f9-98e5-4d34-909e-9228051b229a)
 
@@ -39,6 +32,12 @@ a modern, responsive frontend.
 
 ## List of All Rental/Accomadation Listings Uploaded by User: 
 ![Screenshot 2023-08-15 at 10 38 40 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/90fbb097-849f-4d83-85f8-91c789090556)
+
+## Authentication System: Registration Page 
+![Screenshot 2023-08-26 at 1 40 18 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/81cc16b1-9b93-4438-a619-0d1323592981)
+
+## Authentication System: Login Page (Uses JWT & Bcyrpt)
+![Screenshot 2023-08-26 at 1 39 50 PM](https://github.com/jaiphookan20/Full-Stack-Vacation-Rental-Platform/assets/52240311/96f818ca-cfa9-4cb3-8e48-072cc97b7dcb)
 
 
 
