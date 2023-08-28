@@ -23,7 +23,7 @@ booking form if they are logged in.
 The number of nights is calculated based on the checkIn and checkOut dates using the 
 differenceInCalendarDays function from the date-fns library.
 
-The bookThisPlace function is defined to handle the booking process. It makes a 
+The bookLocation function is defined to handle the booking process. It makes a 
 POST request to the /bookings endpoint with the booking data including checkIn, 
 checkOut, numberOfGuests, name, phone, place, and price (calculated as numberOfNights 
   * place.price). The booking ID is then retrieved from the server response, and the 
@@ -38,7 +38,7 @@ The component renders the booking form UI, including the place price, check-in a
 check-out date inputs, number of guests input, and optionally, the user's name and 
 phone number inputs if the number of nights is greater than 0.
 
-When the user clicks the "Book this place" button, the bookThisPlace function is 
+When the user clicks the "Book this place" button, the bookLocation function is 
 called.
 
 The total price is displayed next to the "Book this place" button, calculated as 
@@ -71,7 +71,7 @@ export default function BookingWidget({ place }) {
   }
 
   // Function to handle the booking process
-  async function bookThisPlace() {
+  async function bookLocation() {
     // Make a POST request to the server to create a booking
     const response = await axios.post('/bookings', {
       checkIn,
@@ -146,7 +146,7 @@ export default function BookingWidget({ place }) {
         )}
       </div>
       {/* Button to trigger the booking process */}
-      <button onClick={bookThisPlace} className="primary mt-4">
+      <button onClick={bookLocation} className="primary mt-4">
         Book this place
         {/* Display the total price if number of nights is greater than 0 */}
         {numberOfNights > 0 && (

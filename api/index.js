@@ -20,7 +20,7 @@ const app = express();
 
 const API_BASE_URL = process.env.API_BASE_URL || '';
 const bcryptSalt = bcrypt.genSaltSync(10);
-const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
+const jwtSecret = 'qwrqtqwt1251261261215asfawa';
 
 app.use(express.json());
 app.use(cookieParser());

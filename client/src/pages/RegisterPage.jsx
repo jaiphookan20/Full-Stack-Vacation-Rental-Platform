@@ -33,13 +33,12 @@ const RegisterPage = () => {
             "email": email,
             "password": password
         }); //using post method of Axios to send an HTTP POST request to the specified URL
-    
-        //    alert('Registration sucesful. Now you can log in');
+            
            toast.success("Registration Successful. Now you can log in'"); 
            setRedirect(true);
         }
        catch(e) {
-            // alert('Registration failed. Please try again later');
+            
             toast.error("Registration failed. Please try again later"); 
        }
     }
